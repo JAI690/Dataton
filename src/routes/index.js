@@ -14,8 +14,8 @@ router.get('/', (req,res) => {
     res.render("../views/dashboard/datos.hbs");
 });
 
-router.get('/estructura', (req,res) => {
-    res.render("../views/datos.hbs");
+router.get('/estructura/', (req,res) => {
+    res.render("../views/principal.hbs");
 });
 
 
