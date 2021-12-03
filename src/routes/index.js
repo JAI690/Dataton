@@ -11,20 +11,29 @@ router.get('/', (req,res) => {
     //const datos1 = convertir(dato,'id');
 
     //console.log(datos);
-    res.render("../views/dashboard/datos.hbs");
+    res.render("../views/principal.hbs");
+});
+
+router.get('/estructura', (req,res) => {
+    res.render("../views/datos.hbs");
+});
+
+
+router.get('/sanciones', (req,res) => {
+    var data2 = fs.readFileSync('./Data/Sistema3Servidores.json', 'utf8');
+    var dato2 = JSON.parse(data2);
+    res.render("../views/dashboard/sanciones.hbs", {dato2});
 });
 
 router.get('/sanciones', (req,res) => {
     var data2 = fs.readFileSync('./Data/Sistema3Servidores.json', 'utf8');
     var dato2 = JSON.parse(data2);
-    console.log(dato2[0]);
     res.render("../views/dashboard/sanciones.hbs", {dato2});
 });
 
 router.get('/declaraciones', (req,res) => {
     var data3 = fs.readFileSync('./Data/declaraciones.json', 'utf8');
     var dato3 = JSON.parse(data3);
-    console.log(dato3[0]);
     res.render("../views/dashboard/declaraciones.hbs", {dato3});
 });
 
