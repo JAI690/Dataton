@@ -27,9 +27,25 @@
                     <li>siglas</li>
                 </ul>
             <li>puesto</li>
-            <li>tipoArea LISTA 1 OBJETO</li>
-            <li>tipoProcedimiento LISTA 3 OBJETOS</li>
+            <li>tipoArea</li>
+                <ul>
+                    <li>clave</li>
+                    <li>valor</li>
+                </ul>
+                <ul>
+                    <li>clave</li>
+                    <li>valor</li>
+                </ul>
+            <li>tipoProcedimiento</li>
+                <ul>
+                    <li>clave</li>
+                    <li>valor</li>
+                </ul>
             <li>nivelResponsabilidad</li>
+                <ul>
+                    <li>clave</li>
+                    <li>valor</li>
+                </ul>
             <li>superiorInmediato</li>
                 <ul>
                     <li>nombres</li>
@@ -47,25 +63,99 @@
             <li>Id</li>
         </ul>
     </div>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Año</th>
-      <th scope="col">RFC</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Dependencia</th>
-    </tr>
-  </thead>
-  <tbody>
-  {{#each dato}}
-    <tr>
-      <td>{{ejercicioFiscal}}</td>
-      <td>{{rfc}}</td>
-      <td>{{nombres}}</td>
-      <td>{{institucionDependencia.nombre}}</td>
-    </tr>
-  {{/each}}
-  </tbody>
-</table>
+
+<diV>
+    <h1>Sistema3Servidores</h1>
+    <h3>Tiene 3 objetos: Sancionado, Sancionadora y Sancion</h3>
+    <ul>
+        <li>id</li>
+        <li>fechaCaptura</li>
+        <li>expediente</li>
+        <li>institucionDependencia</li>
+            <ul>
+                <li>nombre</li>
+            </ul>
+        <li>servidorPublicoSanciado</li>
+            <ul>
+                <li>rfc</li>
+                <li>curp</li>
+                <li>nombres</li>
+                <li>primerApellido</li>
+                <li>segundoApellido</li>
+                <li>genero</li>
+                    <ul>
+                        <li>clave</li>
+                        <li>valor</li>
+                    </ul>
+                <li>puesto</li>
+            </ul>
+        <li>autoridadSancionadora</li>
+        <li>tipoFalta</li>
+            <ul>
+                <li>clave</li>
+                <li>valor</li>
+                <li>descripcion</li>
+            </ul>
+        <li>tipoSancion</li>
+            <ul>
+                <li>Averiguar</li>
+            </ul>
+        <li>causaMotivosHechos</li>
+        <li>resolucion</li>
+            <ul>
+                <li>fechaResolucion</li>
+            </ul>
+        <li>observaciones</li>
+        <li>inhabilitacion</li>
+            <ul>
+                <li>plazo</li>
+                <li>fechaInicial</li>
+                <li>fechaFinal</li>
+            </ul>
+    </ul>
 </div>
 
+<div>
+    <h1>declaraciones</h1>
+    <ul>
+        <li>id</li>
+        <li>metadata</li>
+            <ul>
+                <li>actualizacion</li>
+                <li>tipo</li>
+                <li>institucion</li>
+                <li>declaracionCompleta</li>
+                <li>actualizacionConflictoIntereses</li>
+            </ul>
+        <li>declaracion</li>
+            <ul>
+                <li>situacionPatrimonial OBJETO</li>
+                    <ul>
+                        <li>datosGenerales</li>
+                        <li>domicilioDeclarante</li>
+                        <li>datosCurricularesDeclarante</li>
+                        <li>datosEmpleoCargoComision</li>
+                        <li>experienciaLaboral</li>
+                        <li>datosPareja</li>
+                        <li>datosDependienteEconomico</li>
+                        <li>ingresos</li>
+                        <li>bienesInmuebles</li>
+                        <li>vehiculos</li>
+                        <li>bienesMuebles</li>
+                        <li>inversiones</li>
+                        <li>adeudos</li>
+                        <li>prestamo0Comodato</li>
+                    </ul>
+                <li>interes</li>
+                    <ul>
+                        <li>participacion</li>
+                        <li>participacionTomaDecisiones</li>
+                        <li>apoyos</li>
+                        <li>representacion</li>
+                        <li>clientesPrincipales</li>
+                        <li>beneficiosPrivados</li>
+                        <li>fideicomisos</li>
+                    </ul>
+            </ul>
+    </ul>
+</div>
