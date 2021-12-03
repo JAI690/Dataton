@@ -1,8 +1,55 @@
 <div class="p-4">
+    <div>
+        <h1>SistemaS2</h1>
+        <ul>
+            <li>Id</li>
+            <li>fechaCaptura</li>
+            <li>ejercicioFiscal</li>
+            <li>ramo</li>
+                <ul>
+                    <li>clave</li>
+                    <li>valor</li>
+                </ul>
+            <li>rfc</li>
+            <li>curp</li>
+            <li>nombres</li>
+            <li>primerApellido</li>
+            <li>segundoApellido</li>
+            <li>genero</li>
+                <ul>
+                    <li>clave</li>
+                    <li>valor</li>
+                </ul>
+            <li>institucionDependencia</li>
+                <ul>
+                    <li>nombre</li>
+                    <li>clave</li>
+                    <li>siglas</li>
+                </ul>
+            <li>puesto</li>
+            <li>tipoArea LISTA 1 OBJETO</li>
+            <li>tipoProcedimiento LISTA 3 OBJETOS</li>
+            <li>nivelResponsabilidad</li>
+            <li>superiorInmediato</li>
+                <ul>
+                    <li>nombres</li>
+                    <li>genero</li>
+                        <ul>
+                            <li>clave</li>
+                            <li>valor</li>
+                        </ul>
+                    <li>primerApellido</li>
+                    <li>segundoApellido</li>
+                    <li>curp</li>
+                    <li>rfc</li>
+                    <li>puesto LISTA 1 OBJETO</li>
+                </ul>
+            <li>Id</li>
+        </ul>
+    </div>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID</th>
       <th scope="col">Año</th>
       <th scope="col">RFC</th>
       <th scope="col">Nombre</th>
@@ -12,7 +59,6 @@
   <tbody>
   {{#each dato}}
     <tr>
-      <th scope="row">{{id}}</th>
       <td>{{ejercicioFiscal}}</td>
       <td>{{rfc}}</td>
       <td>{{nombres}}</td>
@@ -22,3 +68,4 @@
   </tbody>
 </table>
 </div>
+
