@@ -1,19 +1,17 @@
-const XMLHttpRequest = require('XMLHttpRequest');
+var fs=require('fs');
+var data=fs.readFileSync('./Data/SistemaS2.json', 'utf8');
+var words=JSON.parse(data);
+var bodyparser=require('body-parser');
+console.log(words);
+var express=require('express');
 
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
+var app=express();
+
+var server=app.listen(3030,listening);
+
+function listening(){
+console.log("listening..");
 }
-
-//usage:
-readTextFile("./Data/SistemaS2.json", function(text){
-    var data = JSON.parse(text);
-    console.log(data);
-});
+app.use(express.static('website'));
+app.use(bodyparser.urlencoded({extended:false}));
+app.use(bodyparser.json());
